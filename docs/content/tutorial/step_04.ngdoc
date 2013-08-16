@@ -180,6 +180,18 @@ text.
 
 * Reverse the sort order by adding a `-` symbol before the sorting value: `<option value="-age">Oldest</option>`
 
+* Now use a dedicated input field to reverse the sort order. Angular accepts a boolean value as second parameter to the filter (`orderBy:orderProp:orderReverse`), so you should name your input field accordingly
+
+__`app/index.html`__
+<pre>
+...
+    <select ng-model="orderReverse" class="span12">
+        <option value="false">Ascending</option>
+        <option value="true">Descending</option>
+    </select>
+...
+</pre>
+
 # Summary
 
 Now that you have added list sorting and tested the app, go to {@link step_05 step 5} to learn
